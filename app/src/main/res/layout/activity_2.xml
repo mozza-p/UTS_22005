@@ -17,18 +17,21 @@
         android:text="Title"/>
 
     <TextView
-        android:id="@+id/receivedBatasUmur"
+        android:id="@+id/receivedBatasUsia"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:text="Watch for"/>
-
     <TextView
         android:id="@+id/receivedGenre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Genre"/>
-
+    <TextView
+        android:id="@+id/receivedYear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Year"/>
     <TextView
         android:id="@+id/receivedDuration"
         android:layout_width="match_parent"

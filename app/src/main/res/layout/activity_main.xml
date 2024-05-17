@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:id="@+id/main"
+    tools:context=".MainActivity1">
     <ImageView
         android:id="@+id/imageFilm"
         android:layout_width="0dp"
@@ -27,13 +28,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTitle"
+        android:id="@+id/edtextTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintMargin="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -42,13 +42,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Watch for"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTitle"
+        app:layout_constraintTop_toBottomOf="@+id/edtextTitle"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"/>
 
     <RadioGroup
-        android:id="@+id/radioGroupAge"
+        android:id="@+id/rdGroupBatasUsia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -73,7 +73,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Genres"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroupAge"
+        app:layout_constraintTop_toBottomOf="@+id/rdGroupBatasUsia"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"/>
@@ -179,7 +179,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/buttonSubmit"
+        android:id="@+id/btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="128dp"
