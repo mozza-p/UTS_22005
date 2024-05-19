@@ -1,4 +1,4 @@
-package com.example.intentlatihan
+package com.example.uts_22005
 
 import android.content.Intent
 import android.os.Bundle
@@ -12,11 +12,10 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.uts_22005.Activity2
 
-class MainActivity2 : AppCompatActivity() {
+class MainActivity1 : AppCompatActivity() {
     lateinit var edTitle: EditText
-    lateinit var btn:Button
+    lateinit var btn: Button
     lateinit var teksBatasUsia : String
     lateinit var teksYear : String
     lateinit var teksGenre: String
@@ -34,7 +33,6 @@ class MainActivity2 : AppCompatActivity() {
     lateinit var spinnerYear: Spinner
     lateinit var spinnerDurHour: Spinner
     lateinit var spinnerDurMinute: Spinner
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -44,7 +42,6 @@ class MainActivity2 : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
         edTitle = findViewById(R.id.edtextTitle)
         btn = findViewById(R.id.btn)
         adult = findViewById(R.id.rdButtonAdult)
@@ -61,19 +58,12 @@ class MainActivity2 : AppCompatActivity() {
             teksDuration = spinnerDurHour.selectedItem.toString()
             teksYear = spinnerYear.selectedItem.toString()
 
-            val moveIntent = Intent(this@MainActivity, Activity2::class.java)
-            moveIntent.putExtra(Activity2.EXTRA_TITLE,  edTitle.text.toString())
+            val moveIntent = Intent(this@MainActivity1, Activity2::class.java)
+            moveIntent.putExtra(Activity2.EXTRA_TITLE, edTitle.text.toString())
             moveIntent.putExtra(Activity2.EXTRA_BATASUSIA, teksBatasUsia)
             moveIntent.putExtra(Activity2.EXTRA_DURATION, teksDuration)
             moveIntent.putExtra(Activity2.EXTRA_YEAR, teksYear)
             startActivity(moveIntent)
         }
-
     }
-
-
-
-
-
-
 }
